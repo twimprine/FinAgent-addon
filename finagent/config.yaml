@@ -1,0 +1,29 @@
+# Public add-on manifest. Contains NO code and NO financial data — just the add-on
+# descriptor and a reference to the public GHCR image (built from the private source repo
+# twimprine/FinAgent by its CI). HA clones this public repo and pulls that image.
+name: FinAgent
+version: "0.1.0"
+slug: finagent
+description: Personal/family financial planning — daily brief + dashboard sensors (plan-only).
+arch:
+  - amd64
+image: "ghcr.io/twimprine/finagent-{arch}"
+startup: application
+boot: manual
+init: false
+hassio_api: true
+homeassistant_api: true
+map:
+  - config:rw
+options:
+  anthropic_api_key: ""
+  recipients:
+    - mobile_app_chaosmonkey_nomap
+  config_dir: /config/finagent
+  year: 0
+schema:
+  anthropic_api_key: password
+  recipients:
+    - str
+  config_dir: str
+  year: int
