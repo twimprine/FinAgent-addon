@@ -23,6 +23,7 @@ options:
   year: 0
   simplefin_access_url: ""
   db_path: /data/finagent.db
+  config_files: ""
 schema:
   anthropic_api_key: password
   recipients:
@@ -32,3 +33,6 @@ schema:
   # Optional: set to pull live balances/transactions on each run (reconcile + refresh).
   simplefin_access_url: password?
   db_path: str
+  # Optional: YAML (or JSON) mapping of filename -> file content, pushed to config_dir on every
+  # run (validated first; see the source repo DOCS.md).
+  config_files: str?
