@@ -2,7 +2,7 @@
 # descriptor and a reference to the public GHCR image (built from the private source repo
 # twimprine/FinAgent by its CI). HA clones this public repo and pulls that image.
 name: FinAgent
-version: "0.1.9"
+version: "0.1.11"
 slug: finagent
 description: Personal/family financial planning — daily brief + dashboard sensors.
 arch:
@@ -18,7 +18,7 @@ map:
 options:
   anthropic_api_key: ""
   recipients:
-    - mobile_app_chaosmonkey_nomap
+    - mobile_app_your_phone
   config_dir: /config/finagent
   year: 0
   simplefin_access_url: ""
@@ -34,5 +34,5 @@ schema:
   simplefin_access_url: password?
   db_path: str
   # Optional: YAML (or JSON) mapping of filename -> file content, pushed to config_dir on every
-  # run (validated first; see the source repo DOCS.md).
-  config_files: str?
+  # run (validated first; see DOCS.md).
+  config_files: password?

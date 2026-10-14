@@ -10,7 +10,8 @@ the private repo `twimprine/FinAgent`; its CI builds the image this add-on pulls
 | Option | Meaning |
 |--------|---------|
 | `anthropic_api_key` | Anthropic key for the Opus/Haiku drafting models. |
-| `recipients` | Notify service suffixes, e.g. `mobile_app_chaosmonkey_nomap`. |
+| `recipients` | Notify service suffixes, e.g. `mobile_app_your_phone`. |
+| `config_files` | Optional, masked: a YAML/JSON mapping of filename → file content, validated and written to `config_dir` each run (allowed: people, bills, budget, debts, accounts, notifications, categories, goal, alerts `.yaml`). Clear it to stop pushing. |
 | `config_dir` | Directory of the hand-editable YAML (default `/config/finagent`). |
 | `year` | Plan year; `0` = current year. |
 
