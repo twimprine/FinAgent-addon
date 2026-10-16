@@ -2,7 +2,7 @@
 # descriptor and a reference to the public GHCR image (built from the private source repo
 # twimprine/FinAgent by its CI). HA clones this public repo and pulls that image.
 name: FinAgent
-version: "0.1.11"
+version: "0.1.12"
 slug: finagent
 description: Personal/family financial planning — daily brief + dashboard sensors.
 arch:
